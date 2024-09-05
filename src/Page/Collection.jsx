@@ -1,18 +1,18 @@
 import BestSeller from "../Compontnes/BestSeller";
 import Disquent from "../Compontnes/Disquent";
-import Hero from "../Compontnes/Hero";
 import LatestCollection from "../Compontnes/LatestCollection";
 
 
-const Home = () => {
+const Collection = () => {
+ 
   return (
-    <div>
-      <Hero></Hero>
-      <LatestCollection></LatestCollection>
+
+    <div className="">
+       <LatestCollection></LatestCollection>
       <BestSeller></BestSeller>
       <Disquent></Disquent>
     </div>
   );
 };
 
-export default Home;
+export default Collection;
