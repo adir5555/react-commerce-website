@@ -2,11 +2,11 @@ import imges from '../assets/foo.png';
 
 const Footer = () => {
   return (
-    <div className='p-2'>
+    <div className=''>
       <footer className="footer bg-base-200 text-base-content p-10">
         <nav>
           <img className='size-16' src={imges} alt="" />
-          <p className=''>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus laudantium molestiae soluta assumenda? Enim nostrum facilis fuga, perferendis culpa voluptatibus voluptas quis itaque qui debitis, aperiam quidem adipisci consectetur ducimus.</p>
+          <p className='max-w-md'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus laudantium molestiae soluta assumenda? Enim nostrum facilis fuga, perferendis culpa voluptatibus voluptas quis itaque qui debitis, aperiam quidem adipisci consectetur ducimus.</p>
         </nav>
         <nav>
           <h6 className="footer-title">Company</h6>

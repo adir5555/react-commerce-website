@@ -7,7 +7,7 @@ const Collection = () => {
  
   return (
 
-    <div className="">
+    <div className="mt-40">
        <LatestCollection></LatestCollection>
       <BestSeller></BestSeller>
       <Disquent></Disquent>

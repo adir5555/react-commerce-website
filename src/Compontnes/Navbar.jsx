@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/logos.gif";
-import { CiUser } from "react-icons/ci";
+import userss from "../assets/signin.gif";
 import { BiMenuAltRight } from "react-icons/bi";
 import { useState } from "react";
 import { GoArrowLeft } from "react-icons/go";
 import { FiShoppingCart } from "react-icons/fi";
 import { GiSelfLove } from "react-icons/gi";
+import "./Navbarsd/Navbarsd.css";
 
 const Navbar = () => {
   const [visible, setVisiable] = useState(false);
@@ -40,16 +40,6 @@ const Navbar = () => {
       >
         Contact
       </NavLink>
-      <div className="group relative">
-        <CiUser className="text-3xl min-w-5"></CiUser>
-        <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4 z-10">
-          <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
-            <p className="cursor-pointer hover:text-black">My proFile</p>
-            <p className="cursor-pointer hover:text-black">order</p>
-            <p className="cursor-pointer hover:text-black">LOgout</p>
-          </div>
-        </div>
-      </div>
     </>
   );
 
@@ -74,22 +64,39 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="flex items-center justify-between  font-medium gap-6 ">
-      <img className="size-10 cursor-pointer" src={logo} alt="" />
+    <div className="naves z-10 max-w-screen-2xl mx-auto flex items-center justify-between bg-base-200 p-8 border-4 border-indigo-00 border-b-indigo-200 ">
+      <div className="">
+        <h1 className="text-3xl text-gray-900 uppercase font-bold prata-regular">
+          Sarker Shop
+        </h1>
+      </div>
       <ul className="hidden sm:flex gap-5 text-3xl text-gray-600 ">
         {navOption}
       </ul>
-      <div className=" flex items-center gap-6">
-        <GiSelfLove className="text-3xl cursor-pointer"></GiSelfLove>
-
-        <Link to="/cart" className="relative">
-          <FiShoppingCart className="text-3xl min-w-5"></FiShoppingCart>
-          <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]">
+      <div className=" flex items-center gap-4">
+        <div className="relative">
+          <p className="absolute right-[-10px] w-4 text-center leading-4 bg-gray-500 text-red-50 aspect-square rounded-full text-[10px]">
             10
           </p>
+          <GiSelfLove className="text-3xl cursor-pointer"></GiSelfLove>
+        </div>
+        <Link to="/" className="relative">
+          <p className="absolute right-[-6px] w-4 text-center leading-4 bg-gray-500 text-red-50 aspect-square rounded-full text-[10px]">
+            10
+          </p>
+          <FiShoppingCart className="text-3xl min-w-5"></FiShoppingCart>
         </Link>
+        <div className="group relative">
+          <img className="w-8 min-w-5" src={userss} alt="" />
+          <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4 z-10">
+            <div className="flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded">
+              <p className="cursor-pointer hover:text-black">My proFile</p>
+              <p className="cursor-pointer hover:text-black">Order</p>
+              <p className="cursor-pointer hover:text-black">Logout</p>
+            </div>
+          </div>
+        </div>
         <button onClick={() => setVisiable(true)}>
-          {" "}
           <BiMenuAltRight className="text-3xl cursor-pointer sm:hidden"></BiMenuAltRight>
         </button>
       </div>
@@ -99,7 +106,7 @@ const Navbar = () => {
           visible ? "w-full" : "w-0"
         } `}
       >
-        <div className=" flex flex-col text-black">
+        <div className="flex flex-col text-black">
           <div
             onClick={() => setVisiable(false)}
             className=" flex items-center gap-4 p-3"

@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div >
-      <div className="mt-36">
+    <div className="mt-40">
+      <div className="">
         <Marquee pauseOnHover={true} className="bg-slate-50 text-3xl "
           direction={"left" | "right" | "up" | "down"} >
           <p className="mr-36">Welcome to my store, thank you for shopping.</p>
@@ -16,7 +16,7 @@ const Hero = () => {
       {/*  */}
 
 
-      <div className="hero bg-base-200 mt-16 py-5 border border-indigo-600 ">
+      <div className="hero bg-base-200 mt-16 py-5 border border-indigo-200 ">
 
         <div className="hero-content flex-col gap-32 lg:flex-row-reverse">
           <img

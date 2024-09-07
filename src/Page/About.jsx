@@ -1,9 +1,13 @@
-
+import BestSeller from "../Compontnes/BestSeller";
+import Disquent from "../Compontnes/Disquent";
+import LatestCollection from "../Compontnes/LatestCollection";
 
 const About = () => {
   return (
-    <div>
-      
+    <div >
+        <LatestCollection></LatestCollection>
+      <BestSeller></BestSeller>
+      <Disquent></Disquent>
     </div>
   );
 };
